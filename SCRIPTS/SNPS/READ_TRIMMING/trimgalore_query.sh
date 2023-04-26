@@ -13,7 +13,7 @@ module load cutadapt/4.0
 module load FastQC/0.11.9
 
 
-cp /proj/uppstore2017185/b2014034/private/raw_data/Population_resequencing_data/151201_D00457_0128_AC80HPANXX/Sample_Swe-sin-"$1"/Swe-sin-"$1"*.fastq.gz $SNIC_TMP
+cp /proj/uppstore2017185/b2014034/private/raw_data/Population_resequencing_data/151201_D00457_0128_AC80HPANXX/Sample_"$1"-"$2"/"$1"-"$2"*.fastq.gz $SNIC_TMP
 
 cd $SNIC_TMP
 
