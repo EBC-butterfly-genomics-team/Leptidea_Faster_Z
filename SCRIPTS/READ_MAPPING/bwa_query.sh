@@ -16,7 +16,7 @@ ASSEMBLY=LsinapisSweM
 lane=3
 
 cp /proj/uppoff2020002/private/result_files/Leptidea/Genome_assembly/HiC_assemblies/"$ASSEMBLY".fasta $SNIC_TMP
-cp /home/larshook/LarsH/FastZ/LEPTIDEA_OUTGROUPS/1d_RePaired/"$1"_L003_R*_001_val_*_final.fq.gz $SNIC_TMP
+cp /home/larshook/LarsH/FastZ/LEPTIDEA_OUTGROUPS/READS_FINAL/"$1"_L003_R*_001_val_*_final.fq.gz $SNIC_TMP
 #cp /home/larshook/LarsH/W_CHROMOSOME/READS_FINAL/P14502/"$1".barcoded_R*_final.fq.gz $SNIC_TMP
 
 cd $SNIC_TMP
