@@ -38,7 +38,7 @@ gatk --java-options "-Xmx6g" FastaAlternateReferenceMaker \
 
 # reformat header to original format...
 
-sed 's/>/>HiC_scaffold_/' "$reference"_snp_masked.fasta | awk '{print $1}' > "$reference"_snp_masked.temp
+sed 's/:/ /' "$reference"_snp_masked.fasta | awk '{if (NF>1) print ">"$2; else print}' > "$reference"_snp_masked.temp
 mv "$reference"_snp_masked.temp "$reference"_snp_masked.fasta
 
 # make variant fasta...
@@ -50,7 +50,7 @@ gatk --java-options "-Xmx6g" FastaAlternateReferenceMaker \
 
 # reformat header to original format...
 
-sed 's/>/>HiC_scaffold_/' "$reference"_variant.fasta | awk '{print $1}' > "$reference"_variant.temp
+sed 's/:/ /' "$reference"_variant.fasta | awk '{if (NF>1) print ">"$2; else print}' > "$reference"_variant.temp
 mv "$reference"_variant.temp "$reference"_variant.fasta
 
 
