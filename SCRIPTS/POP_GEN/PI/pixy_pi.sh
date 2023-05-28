@@ -17,7 +17,7 @@ window=100000
 bedfile=LsinapisSweM_w100kb_s10kb.bed
 
 cp /home/larshook/LarsH/FastZ/"$bedfile" $SNIC_TMP
-cp /home/larshook/LarsH/FastZ/PI/population_file.txt $SNIC_TMP
+cp /home/larshook/SCRIPTS/FastZ/PI/population_file.txt $SNIC_TMP
 cp /home/larshook/LarsH/FastZ/PI/LsinapisSweM_"$fold"-fold_sites.txt $SNIC_TMP
 cp /home/larshook/LarsH/FastZ/Snps/HaplotypeCaller/round2/LsinapisSweM-Swe-sin_final_all-filtered_q30.vcf.gz $SNIC_TMP
 
