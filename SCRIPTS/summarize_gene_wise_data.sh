@@ -33,6 +33,8 @@ module load seqtk
 # dnds
 # Dn
 # Ds
+# Ns
+# Ss
 
 ### polymorphism data ###
 # Pn
@@ -43,7 +45,7 @@ module load seqtk
 # pi4
 
 ## Tajima's D
-
+# TajD
 
 
 
