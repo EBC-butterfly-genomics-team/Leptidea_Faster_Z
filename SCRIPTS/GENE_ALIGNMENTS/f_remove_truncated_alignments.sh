@@ -34,7 +34,7 @@ do
 
   if [[ $remove_align = "yes" ]] 
   then
-  rm -f "$main_path"/TRUNCATED_ALIGNMENTS/gene_"$i".best.filtered.fas
+    rm -f "$main_path"/TRUNCATED_ALIGNMENTS/gene_"$i".best.filtered.fas
   fi
 
 done
