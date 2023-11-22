@@ -13,7 +13,7 @@ ml bcftools
 
 cd /home/larshook/LarsH/FastZ/LEPTIDEA_OUTGROUPS/SNPS/MPILEUP
 
-for sample in P14502_103 P14502_104 P14458_107_S28 P14458_108_S29 P14458_103_S24 P14458_104_S25
+for sample in P14502_103 P14502_104 P14458_107_S28 P14458_108_S29 P14458_103_S24 P14458_104_S25 P14502_105 P14502_106
 do
   echo "QUAL DP" > "$sample"_quality.txt
   bcftools view $sample.bcf |\
