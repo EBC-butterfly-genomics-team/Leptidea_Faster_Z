@@ -13,7 +13,7 @@ all_windows=100kb
 filter=200
 
 
-for sample in P14458_103_S24 P14458_104_S25 P14458_107_S28 P14458_108_S29 P14502_103 P14502_104
+for sample in P14458_103_S24 P14458_104_S25 P14458_107_S28 P14458_108_S29 P14502_103 P14502_104 P14502_105 P14502_106
 do
 
   vcf=$main_path/$snp_path/"$sample"-filtered_"$filter".vcf.gz
