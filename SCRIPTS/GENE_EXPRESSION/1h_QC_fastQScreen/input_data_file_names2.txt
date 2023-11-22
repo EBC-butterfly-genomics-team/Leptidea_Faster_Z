@@ -1,0 +1,2 @@
+condetri-P5052_226_S59_L006_trim1.tagged_filter.fastq
+condetri-P5052_226_S59_L006_trim2.tagged_filter.fastq

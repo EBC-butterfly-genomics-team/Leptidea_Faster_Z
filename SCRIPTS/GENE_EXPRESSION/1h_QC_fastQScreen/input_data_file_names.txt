@@ -1,0 +1,2 @@
+condetri-P5052_226_S59_L006_trim1.fastq
+condetri-P5052_226_S59_L006_trim2.fastq
