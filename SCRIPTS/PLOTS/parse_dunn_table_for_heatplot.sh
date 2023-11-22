@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# parse the result from Dunn test (R) and use output as input for plot 2C...
 
 printf "group1\tgroup2\tn1\tn2\tstatistic\tp\tp.adj\tp.adj.signif\n" dunn_test_dnds.txt > dunn_test_table.txt
 
