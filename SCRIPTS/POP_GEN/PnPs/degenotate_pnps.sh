@@ -10,8 +10,9 @@ ml bioinfo-tools
 ml samtools
 
 
-# use degenotate to get Pn and Ps...
-# output file mk.tsv contains estimates
+# Degenotate can be used to calculate pN/pS
+# Here we only want Pn and Ps from those calculations... L. juvernica as outgroup is therefore irrelevant for our analysis
+# (output file mk.tsv contains results)
 
 
 # remove "*" segmental deletion annotation as these makes degenotate crash... 
