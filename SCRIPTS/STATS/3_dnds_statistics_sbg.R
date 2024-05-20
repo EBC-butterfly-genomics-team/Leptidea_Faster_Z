@@ -313,6 +313,80 @@ plot(boot_dnds_UBG_Z3)
 # ( 0.0821,  0.1210 )  
 
 
+                         
+#---------------------------------------------------------------------#
+##### test if dN and dS are different between sex-bias categories #####
+#---------------------------------------------------------------------#
+
+#median(A_dnds_sbg$dn[A_dnds_sbg$sex_bias == "FBG"])
+
+kruskal.test(dn ~ sex_bias, data = A_dnds_sbg)
+# Kruskal-Wallis chi-squared = 9.6468, df = 2, p-value = 0.008039
+wilcox_test(A_dnds_sbg, dn ~ sex_bias, p.adjust.method = "bonferroni")
+#    .y.   group1 group2    n1    n2 statistic     p p.adj p.adj.signif
+#  1 dn    FBG    MBG     1151  1153   634954. 0.064 0.19  ns          
+#  2 dn    FBG    UBG     1151  5889  3434608. 0.452 1     ns          
+#  3 dn    MBG    UBG     1153  5889  3582214. 0.002 0.006 **          
+
+# A: MBG > UBG
+
+ggplot(A_dnds_sbg, aes(y=dn, x=sex_bias)) +
+  geom_boxplot() +
+  coord_cartesian(y=c(0,0.02))
+ 
+
+kruskal.test(dn ~ sex_bias, data = Z_dnds)
+# Kruskal-Wallis chi-squared = 7.2349, df = 3, p-value = 0.06478
+
+kruskal.test(dn ~ sex_bias, data = Z1)
+# Kruskal-Wallis chi-squared = 9.9366, df = 2, p-value = 0.006955
+wilcox_test(Z1, dn ~ sex_bias, p.adjust.method = "bonferroni")
+#    .y.   group1 group2    n1    n2 statistic     p p.adj p.adj.signif
+#  1 dn    FBG    MBG       34   149     3348. 0.003 0.008 **          
+#  2 dn    FBG    UBG       34   405     8879  0.004 0.012 *           
+#  3 dn    MBG    UBG      149   405    28545  0.317 0.951 ns
+
+# Z1: FBG > UBG+MBG
+
+kruskal.test(dn ~ sex_bias, data = Z2)
+# Kruskal-Wallis chi-squared = 0.86045, df = 2, p-value = 0.6504
+
+kruskal.test(dn ~ sex_bias, data = Z3)
+# Kruskal-Wallis chi-squared = 0.089694, df = 2, p-value = 0.9561
+
+
+
+
+
+## dS
+
+kruskal.test(ds ~ sex_bias, data = A_dnds_sbg)
+
+# Kruskal-Wallis chi-squared = 2.1581, df = 2, p-value = 0.3399
+
+kruskal.test(ds ~ sex_bias, data = Z_dnds)
+# Kruskal-Wallis chi-squared = 1.0747, df = 3, p-value = 0.7832
+
+kruskal.test(ds ~ sex_bias, data = Z1)
+
+# Kruskal-Wallis chi-squared = 0.18963, df = 2, p-value = 0.9095
+
+kruskal.test(ds ~ sex_bias, data = Z2)
+
+# Kruskal-Wallis chi-squared = 6.65, df = 2, p-value = 0.03597
+
+wilcox_test(Z2, ds ~ sex_bias, p.adjust.method = "bonferroni")
+
+#    .y.   group1 group2    n1    n2 statistic     p p.adj p.adj.signif
+#  1 ds    FBG    MBG       30    85     1060  0.172 0.516 ns          
+#  2 ds    FBG    UBG       30   255     2791  0.016 0.046 *           
+#  3 ds    MBG    UBG       85   255     9820. 0.195 0.585 ns
+
+# Z2: FBG < UBG
+
+kruskal.test(ds ~ sex_bias, data = Z3)
+
+# Kruskal-Wallis chi-squared = 1.6761, df = 2, p-value = 0.4326
 
 
 
